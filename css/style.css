@@ -1,0 +1,65 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0; padding: 0; border: 0;	font-size: 100%; font: inherit;	vertical-align: baseline;}
+ul {list-style:none;}
+img {border: 0;}
+body {background-image:url(../img/cat1.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; width:100vw; height: 100vh; position:relative; font-family: 'Hind Siliguri', sans-serif; overflow: hidden;}
+
+h1 {display:none;}
+
+main {width: 1000px; height: 700px; background-color: rgba(0,0,0,0.3); position:absolute; top:50%; left:50%;  transform:translate(-50%, -50%); border-radius:50px; text-align:center; padding: auto 0; color:white;}
+
+.text_box {width: 100%; position:absolute; top:50%; left:50%;  transform:translate(-50%, -50%); }
+.time_text {font-weight: 700; font-size: 170px;}
+.what_name_text {font-weight: 500; font-size: 70px;}
+.greeting_user {font-weight: 500; font-size: 70px;}
+.q_text {font-weight: 400; font-size: 50px;}
+.main_todo_box {display:flex; align-items:center; justify-content:center; font-weight: 400; font-size: 50px; }
+.main_todo {margin-right: 15px;}
+.main_todo:hover {text-decoration:2px underline dashed;}
+.user_name_input {font-weight: 400; font-size: 50px; border:none; border-bottom: 2px solid white; background-color: transparent; color:white;}
+.user_name_input:focus {outline:none;}
+.main_todo_input {font-weight: 400; font-size: 50px; border:none; border-bottom: 2px solid white; background-color: transparent; color:white;}
+.main_todo_input:focus {outline:none;}
+.main_todo_clear_btn {font-size: 25px; background:transparent; color:white; border:1px solid white; border-radius:9px;}
+.main_todo_clear_btn:hover {color:tomato;}
+.display_none {display:none;}
+.user_name:hover {text-decoration:2px underline dashed;}
+
+@media screen and (max-width:1000px) {
+main {width: 90%; height: 100%;}
+.text_box {width:90%;}
+.time_text {font-size: 120px;}
+.greeting_user {font-size: 50px;}
+.q_text, .main_todo_box, .what_name_text {font-size: 50px; }
+.main_todo_input, .user_name_input {font-size: 50px; width: 90%;}
+}
+@media screen and (max-width:600px) {
+.time_text {font-size: 80px;}
+.greeting_user {font-size: 30px;}
+.q_text, .main_todo_box, .what_name_text {font-size: 30px; }
+.main_todo_input, .user_name_input {font-size: 30px; line-height: 170%}
+.main_todo_clear_btn {font-size: 15px;}
+}
+@media screen and (max-width:300px) {
+.time_text {display:none;}
+}
+@media screen and (max-height:550px) {
+.time_text {display:none;}
+}
+@media screen and (max-height:350px) {
+.greeting_user {display:none;}
+}
+@media screen and (max-height:240px) {
+.todo_q_form {display:none;}
+}

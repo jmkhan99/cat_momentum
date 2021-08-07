@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cat Momentum</title>
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <header></header>
+    <main>
+      <section class="text_box">
+        <article class="time_box">
+          <span class="time_text"
+            ><span class="time_text_hours">11</span>:<span
+              class="time_text_minutes"
+              >00</span
+            ></span
+          >
+        </article>
+        <form class="name_form">
+          <div>
+            <span class="what_name_text">Hello, What's your name?</span>
+          </div>
+          <input
+            required
+            class="user_name_input"
+            type="text"
+            name="user_name"
+          />
+        </form>
+        <article class="greeting_box display_none">
+          <span class="greeting_user"
+            ><span class="greeting_text">Good Morning</span>,
+            <span class="user_name"> 준모</span><span>.</span></span
+          >
+        </article>
+        <form class="todo_q_form display_none">
+          <div>
+            <span class="q_text">What is main focus for today?</span>
+          </div>
+          <div>
+            <input class="main_todo_input" type="text" name="main_todo" />
+          </div>
+        </form>
+        <article class="main_todo_box display_none">
+          <span class="main_todo"></span
+          ><button class="main_todo_clear_btn">✔</button>
+        </article>
+      </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
