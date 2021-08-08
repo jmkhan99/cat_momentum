@@ -31,7 +31,6 @@ export const userNameObj = {
   editName() {
     if (toDoObj.oneMainToDo) {
       greetingObj.greetingBox.classList.add("display_none");
-      toDoObj.toDoQForm.classList.add("display_none");
       this.editInputReady();
     } else {
       greetingObj.greetingBox.classList.add("display_none");
@@ -42,7 +41,5 @@ export const userNameObj = {
     this.nameForm.classList.remove("display_none");
     this.userNameInput.value = this.userName;
     this.userNameInput.focus();
-    this.makeUserName = this.makeUserName.bind(this);
-    this.nameForm.addEventListener("submit", this.makeUserName);
   },
 };

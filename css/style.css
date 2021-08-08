@@ -13,7 +13,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {margin: 0; padding: 0; border: 0;	font-size: 100%; font: inherit;	vertical-align: baseline;}
 ul {list-style:none;}
 img {border: 0;}
-body {background-image:url(../img/cat1.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; width:100vw; height: 100vh; position:relative; font-family: 'Hind Siliguri', sans-serif; overflow: hidden;}
+body {background-position: center; background-size: cover; background-repeat: no-repeat; width:100vw; height: 100vh; position:relative; font-family: 'Hind Siliguri', sans-serif; overflow: hidden;}
 
 h1 {display:none;}
 
@@ -31,8 +31,9 @@ main {width: 1000px; height: 700px; background-color: rgba(0,0,0,0.3); position:
 .user_name_input:focus {outline:none;}
 .main_todo_input {font-weight: 400; font-size: 50px; border:none; border-bottom: 2px solid white; background-color: transparent; color:white;}
 .main_todo_input:focus {outline:none;}
-.main_todo_clear_btn {font-size: 25px; background:transparent; color:white; border:1px solid white; border-radius:9px;}
-.main_todo_clear_btn:hover {color:tomato;}
+.main_todo_clear_btn {border:none; font-size:30px; background:transparent; color:white;}
+.main_todo_clear_btn2 {border:none; font-size:25px; background:transparent; color:white;}
+.main_todo_clear_btn2:hover {color:tomato;}
 .display_none {display:none;}
 .user_name:hover {text-decoration:2px underline dashed;}
 
@@ -49,9 +50,10 @@ main {width: 90%; height: 100%;}
 .greeting_user {font-size: 30px;}
 .q_text, .main_todo_box, .what_name_text {font-size: 30px; }
 .main_todo_input, .user_name_input {font-size: 30px; line-height: 170%}
-.main_todo_clear_btn {font-size: 15px;}
+.main_todo_clear_btn {font-size: 25px;}
 }
 @media screen and (max-width:300px) {
+.main_todo_clear_btn, .main_todo_clear_btn2 {display:none;}
 .time_text {display:none;}
 }
 @media screen and (max-height:550px) {
@@ -61,5 +63,5 @@ main {width: 90%; height: 100%;}
 .greeting_user {display:none;}
 }
 @media screen and (max-height:240px) {
-.todo_q_form {display:none;}
+.todo_q_form, .main_todo_box {display:none;}
 }

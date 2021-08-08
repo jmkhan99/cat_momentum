@@ -3,6 +3,8 @@ export const toDoObj = {
   mainToDoInput: document.querySelector(".main_todo_input"),
   mainToDo: document.querySelector(".main_todo"),
   mainToDoBox: document.querySelector(".main_todo_box"),
+  clearBtn: document.querySelector(".main_todo_clear_btn"),
+  clearBtn2: document.querySelector(".main_todo_clear_btn2"),
   oneMainToDo: "",
   localMainToDo: "",
   makeMainToDo(event) {
@@ -40,5 +42,27 @@ export const toDoObj = {
     } else {
       return;
     }
+  },
+  clickClearBtn() {
+    console.log("click");
+    if (this.clearBtn.innerText === "⬜") {
+      this.clearBtn.innerText = "✅";
+      this.mainToDo.style.textDecoration = "3px solid line-through";
+    } else {
+      this.clearBtn.innerText = "⬜";
+      this.mainToDo.style.textDecoration = "";
+    }
+  },
+  clickClearBtn2() {
+    console.log("click2");
+    this.mainToDoInput.value = "";
+    this.mainToDoBox.classList.add("display_none");
+    this.toDoQForm.classList.remove("display_none");
+    this.mainToDoInput.focus();
+    localStorage.removeItem("maintodo");
+    this.localMainToDo = localStorage.getItem("maintodo");
+    this.oneMainToDo = "";
+    this.clearBtn.innerText = "⬜";
+    this.mainToDo.style.textDecoration = "";
   },
 };
