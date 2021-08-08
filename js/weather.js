@@ -12,7 +12,6 @@ export const weatherObj = {
       .then((response) => response.json())
       .then((data) => {
         console.dir(data);
-        data.nameForm, data.weather[0].main;
       });
   },
   errWeather() {
