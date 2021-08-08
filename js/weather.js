@@ -11,6 +11,8 @@ export const weatherObj = {
     fetch(this.url)
       .then((response) => response.json())
       .then((data) => {
+        this.weather.innerText = data.weather[0].main;
+        this.temp.innerHTML = data.main.temp + "&nbsp;&#8451;";
         console.dir(data);
       });
   },

@@ -35,8 +35,8 @@ main, .todolist {width: 1000px; height: 700px; background-color: rgba(0,0,0,0.3)
 .item_clear_btn {margin-left:30px;}
 .main_todo_clear_btn2, .item_clear_btn2:hover {color:tomato;}
 .btn {border:none; font-size:20px; background:transparent; color:white;}
-.weather_box {font-size:20px; background:transparent; color:white; text-align:right; padding-top: 25px;}
-.temp {margin: 0 50px;}
+.weather_box {font-size:20px; background:transparent; color:white; padding-top: 25px; position:absolute; right:50px; z-index:2; display:flex; justify-content:center; width:250px;}
+.temp, .weather {width:50%; text-align:center;}
 .main_todolist_btn, .done__main_todolist_btn {margin-left: 20px;}
 .btn:hover {cursor:pointer; color:tomato;}
 .btn_box {text-align:right; margin-top: 50px; padding-right: 50px;}
@@ -51,11 +51,12 @@ main, .todolist {width: 1000px; height: 700px; background-color: rgba(0,0,0,0.3)
 main {width: 90%; height: 100%;}
 .todolist {width: 90%; height: 100%;}
 .text_box {width:90%;}
-.time_text {font-size: 120px;}
+.time_text, {font-size: 120px;}
 .greeting_user {font-size: 50px;}
 .q_text, .main_todo_box, .what_name_text {font-size: 50px; }
 .input, .todolist_input {font-size: 50px; width: 90%;}
 .item_list, .done_item_list {padding-left:30px;}
+.weather_box {left:50%; transform:translateX(-50%)}
 }
 @media screen and (max-width:600px) {
 .time_text {font-size: 80px;}
@@ -65,14 +66,14 @@ main {width: 90%; height: 100%;}
 .main_todo_clear_btn {font-size: 25px;}
 }
 @media screen and (max-width:300px) {
-.main_todo_clear_btn, .main_todo_clear_btn2, .time_text, .todolist_btn_box, .item_list, .done_item_list, .btn_box {display:none;}
+.main_todo_clear_btn, .main_todo_clear_btn2, .time_text, .todolist_btn_box, .item_list, .done_item_list, .btn_box, .weather_box  {display:none;}
 }
 @media screen and (max-height:550px) {
-.time_text {display:none;}
+.time_text, .weather_box {display:none;}
 }
 @media screen and (max-height:350px) {
 .greeting_user {display:none;}
 }
 @media screen and (max-height:240px) {
-.todo_q_form, .main_todo_box, .todolist_btn_box  {display:none;}
+.todo_q_form, .main_todo_box, .todolist_btn_box, {display:none;}
 }
