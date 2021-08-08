@@ -6,18 +6,18 @@ import { toDoListObj } from "./todolist.js";
 
 export const mainTotal1 = document.querySelector(".main_total1");
 
-navigator.geolocation.getCurrentPosition(getWeather, errWeather)
+// navigator.geolocation.getCurrentPosition(getWeather, errWeather)
 
-function getWeather(position) {
-  console.log('weather')
-  const curLat = position.coords.latitude
-  const curLon = position.coords.longitude
-  console.log(curLat)
-  console.log(curLon)
-}
-function errWeather() {
-  console.log('error')
-}
+// function getWeather(position) {
+//   console.log('weather')
+//   const curLat = position.coords.latitude
+//   const curLon = position.coords.longitude
+//   console.log(curLat)
+//   console.log(curLon)
+// }
+// function errWeather() {
+//   console.log('error')
+// }
 
 bgObj.changeBg();
 timeObj.firstSetClock();
