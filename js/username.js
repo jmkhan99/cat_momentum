@@ -25,7 +25,6 @@ export const userNameObj = {
       toDoObj.displayMainToDo();
     } else {
       toDoObj.toDoQForm.classList.remove("display_none");
-      toDoObj.mainToDoInput.focus();
     }
   },
   editName() {
@@ -40,6 +39,5 @@ export const userNameObj = {
   editInputReady() {
     this.nameForm.classList.remove("display_none");
     this.userNameInput.value = this.userName;
-    this.userNameInput.focus();
   },
 };

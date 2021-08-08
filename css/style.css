@@ -17,7 +17,7 @@ body {background-position: center; background-size: cover; background-repeat: no
 
 h1 {display:none;}
 
-main {width: 1000px; height: 700px; background-color: rgba(0,0,0,0.3); position:absolute; top:50%; left:50%;  transform:translate(-50%, -50%); border-radius:50px; text-align:center; padding: auto 0; color:white;}
+main, .todolist {width: 1000px; height: 700px; background-color: rgba(0,0,0,0.3); position:absolute; top:50%; left:50%;  transform:translate(-50%, -50%); border-radius:50px; text-align:center; padding: auto 0; color:white;}
 
 .text_box {width: 100%; position:absolute; top:50%; left:50%;  transform:translate(-50%, -50%); }
 .time_text {font-weight: 700; font-size: 170px;}
@@ -27,34 +27,43 @@ main {width: 1000px; height: 700px; background-color: rgba(0,0,0,0.3); position:
 .main_todo_box {display:flex; align-items:center; justify-content:center; font-weight: 400; font-size: 50px; }
 .main_todo {margin-right: 15px;}
 .main_todo:hover {text-decoration:2px underline dashed;}
-.user_name_input {font-weight: 400; font-size: 50px; border:none; border-bottom: 2px solid white; background-color: transparent; color:white;}
-.user_name_input:focus {outline:none;}
-.main_todo_input {font-weight: 400; font-size: 50px; border:none; border-bottom: 2px solid white; background-color: transparent; color:white;}
-.main_todo_input:focus {outline:none;}
-.main_todo_clear_btn {border:none; font-size:30px; background:transparent; color:white;}
-.main_todo_clear_btn2 {border:none; font-size:25px; background:transparent; color:white;}
-.main_todo_clear_btn2:hover {color:tomato;}
+.input {font-weight: 400; font-size: 50px; border:none; border-bottom: 2px solid white; background-color: transparent; color:white;}
+.input:focus {outline:none;}
+.todolist_input {margin: 50px 0;}
+.todolist_input::placeholder {color:#AAAAAA;}
+.btn_item {border:none; font-size:30px; background:transparent; color:white;}
+.item_clear_btn {margin-left:30px;}
+.main_todo_clear_btn2, .item_clear_btn2:hover {color:tomato;}
+.btn {border:none; font-size:20px; background:transparent; color:white;}
+.main_todolist_btn, .done__main_todolist_btn {margin-left: 20px;}
+.btn:hover {cursor:pointer; color:tomato;}
+.btn_box {text-align:right; margin-top: 50px; padding-right: 50px;}
+.todolist_first_btn_box {display:flex; justify-content:flex-end;}
 .display_none {display:none;}
 .user_name:hover {text-decoration:2px underline dashed;}
+.item_list {box-sizing:border-box; text-align:left; background:transparent; width: 100%; height: 350px; overflow-y :scroll; padding-left: 150px;}
+.done_item_list {box-sizing:border-box; text-align:left; background:transparent; width: 100%; height: 350px; overflow-y :scroll; padding-left: 150px; margin-top: 162px;}
+.item {display:flex; align-items:center; font-weight: 400; font-size: 40px;}
 
 @media screen and (max-width:1000px) {
 main {width: 90%; height: 100%;}
+.todolist {width: 90%; height: 100%;}
 .text_box {width:90%;}
 .time_text {font-size: 120px;}
 .greeting_user {font-size: 50px;}
 .q_text, .main_todo_box, .what_name_text {font-size: 50px; }
-.main_todo_input, .user_name_input {font-size: 50px; width: 90%;}
+.input, .todolist_input {font-size: 50px; width: 90%;}
+.item_list, .done_item_list {padding-left:30px;}
 }
 @media screen and (max-width:600px) {
 .time_text {font-size: 80px;}
 .greeting_user {font-size: 30px;}
 .q_text, .main_todo_box, .what_name_text {font-size: 30px; }
-.main_todo_input, .user_name_input {font-size: 30px; line-height: 170%}
+.input {font-size: 30px; line-height: 170%}
 .main_todo_clear_btn {font-size: 25px;}
 }
 @media screen and (max-width:300px) {
-.main_todo_clear_btn, .main_todo_clear_btn2 {display:none;}
-.time_text {display:none;}
+.main_todo_clear_btn, .main_todo_clear_btn2, .time_text, .todolist_btn_box, .item_list, .done_item_list, .btn_box {display:none;}
 }
 @media screen and (max-height:550px) {
 .time_text {display:none;}
@@ -63,5 +72,5 @@ main {width: 90%; height: 100%;}
 .greeting_user {display:none;}
 }
 @media screen and (max-height:240px) {
-.todo_q_form, .main_todo_box {display:none;}
+.todo_q_form, .main_todo_box, .todolist_btn_box  {display:none;}
 }

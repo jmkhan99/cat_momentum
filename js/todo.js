@@ -29,7 +29,6 @@ export const toDoObj = {
   },
   editMainToDo() {
     this.mainToDoInput.value = this.oneMainToDo;
-    this.mainToDoInput.focus();
     this.toDoQForm.classList.remove("display_none");
     this.mainToDoBox.classList.add("display_none");
     console.log("edit");
@@ -48,7 +47,18 @@ export const toDoObj = {
     if (this.clearBtn.innerText === "⬜") {
       this.clearBtn.innerText = "✅";
       this.mainToDo.style.textDecoration = "3px solid line-through";
+      localStorage.setItem("toDoCheck", "on");
     } else {
+      this.clearBtn.innerText = "⬜";
+      this.mainToDo.style.textDecoration = "";
+      localStorage.setItem("toDoCheck", "off");
+    }
+  },
+  checkTodo() {
+    if (localStorage.getItem("toDoCheck") === "on") {
+      this.clearBtn.innerText = "✅";
+      this.mainToDo.style.textDecoration = "3px solid line-through";
+    } else if (localStorage.getItem("toDoCheck") === "off") {
       this.clearBtn.innerText = "⬜";
       this.mainToDo.style.textDecoration = "";
     }
@@ -58,7 +68,6 @@ export const toDoObj = {
     this.mainToDoInput.value = "";
     this.mainToDoBox.classList.add("display_none");
     this.toDoQForm.classList.remove("display_none");
-    this.mainToDoInput.focus();
     localStorage.removeItem("maintodo");
     this.localMainToDo = localStorage.getItem("maintodo");
     this.oneMainToDo = "";

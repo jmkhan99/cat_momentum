@@ -16,7 +16,35 @@
   <body>
     <h1>To-Do List</h1>
     <header></header>
-    <main>
+    <section class="todolist todolist_start display_none">
+      <form class="todolist_form">
+        <input
+          required
+          class="todolist_input input"
+          type="text"
+          name="todolist_item"
+          maxlength="10"
+          placeholder="New Todo"
+        />
+      </form>
+      <ul class="item_list todo_item_list">
+        <li class="item"></li>
+      </ul>
+      <div class="todolist_start_btn_box btn_box">
+        <span class="done_todolist_btn btn">Done</span>
+        <span class="main_todolist_btn btn">Main</span>
+      </div>
+    </section>
+    <section class="todolist todolist_done display_none">
+      <ul class="done_item_list">
+        <li class="item"></li>
+      </ul>
+      <div class="todolist_done_btn_box btn_box">
+        <span class="done__todolist_btn btn">Todo</span>
+        <span class="done__main_todolist_btn btn">Main</span>
+      </div>
+    </section>
+    <main class="main_total1">
       <section class="text_box">
         <article class="time_box">
           <span class="time_text"
@@ -32,7 +60,7 @@
           </div>
           <input
             required
-            class="user_name_input"
+            class="user_name_input input"
             type="text"
             name="user_name"
             maxlength="10"
@@ -49,14 +77,22 @@
             <span class="q_text">What is main focus for today?</span>
           </div>
           <div>
-            <input maxlength="10" class="main_todo_input" type="text" name="main_todo" />
+            <input
+              maxlength="10"
+              class="main_todo_input input"
+              type="text"
+              name="main_todo"
+            />
           </div>
         </form>
         <article class="main_todo_box display_none">
           <span class="main_todo"></span
-          ><button class="main_todo_clear_btn">⬜</button
-          ><button class="main_todo_clear_btn2">clear</button>
+          ><button class="main_todo_clear_btn btn_item">⬜</button
+          ><button class="main_todo_clear_btn2 btn_item">clear</button>
         </article>
+        <div class="todolist_btn_box btn_box">
+          <span class="todolist_btn btn">Todo</span>
+        </div>
       </section>
     </main>
     <footer></footer>
