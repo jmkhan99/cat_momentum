@@ -2,17 +2,17 @@ import { timeObj, greetingObj } from "./time_greeting.js";
 import { userNameObj } from "./username.js";
 import { bgObj } from "./background.js";
 import { toDoObj } from "./todo.js";
-import { weatherObj } from "./weather.js";
+// import { weatherObj } from "./weather.js";
 
-weatherObj.getLatLong = weatherObj.getLatLong.bind(weatherObj);
-weatherObj.errorPosition = weatherObj.errorPosition.bind(weatherObj);
-navigator.geolocation.getCurrentPosition(weatherObj.getLatLong, weatherObj.errorPosition);
-fetch(weatherObj.weatherUrl)
-  .then((response) => response.json())
-  .then((data) => {
-    console.dir(data);
-    console.log(data.name);
-  });
+// weatherObj.getLatLong = weatherObj.getLatLong.bind(weatherObj);
+// weatherObj.errorPosition = weatherObj.errorPosition.bind(weatherObj);
+// navigator.geolocation.getCurrentPosition(weatherObj.getLatLong, weatherObj.errorPosition);
+// fetch(weatherObj.weatherUrl)
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.dir(data);
+//     console.log(data.name);
+//   });
 
 bgObj.changeBg();
 timeObj.firstSetClock();
