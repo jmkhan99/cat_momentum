@@ -35,6 +35,8 @@ main, .todolist {width: 1000px; height: 700px; background-color: rgba(0,0,0,0.3)
 .item_clear_btn {margin-left:30px;}
 .main_todo_clear_btn2, .item_clear_btn2:hover {color:tomato;}
 .btn {border:none; font-size:20px; background:transparent; color:white;}
+.weather_box {font-size:20px; background:transparent; color:white; text-align:right; padding-top: 25px;}
+.temp {margin: 0 50px;}
 .main_todolist_btn, .done__main_todolist_btn {margin-left: 20px;}
 .btn:hover {cursor:pointer; color:tomato;}
 .btn_box {text-align:right; margin-top: 50px; padding-right: 50px;}
